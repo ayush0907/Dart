@@ -16,6 +16,8 @@ void main() {
   
   bool isalive=true;
   var isgood=false;
+  var islazy;
+  print(islazy);
   print(isalive);
   print(isgood);
   }
