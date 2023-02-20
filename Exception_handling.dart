@@ -39,5 +39,24 @@ try{
     print("This is final block which will execute always.");
 }
 
+  print("Case 5");
+  //Custom exception
+  try{
+      depositMoney(-300);
+  } catch(e){
+      print(e.errorMessage());
+  }
 
+}
+
+class DepositException implements Exception {
+    String errorMessage(){
+        return "You cannot enter amount value less than 0";
+    }
+}
+
+void depositMoney(int amount){
+    if(amount<0){
+        throw new DepositException();
+    }
 }
